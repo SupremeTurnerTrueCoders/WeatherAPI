@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\turne\\repos\\Weather API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D88233E1-1E6B-4C50-B3A6-40D07094A18B}|Weather API\\Weather API.csproj|c:\\users\\turne\\repos\\weather api\\weather api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D88233E1-1E6B-4C50-B3A6-40D07094A18B}|Weather API\\Weather API.csproj|solutionrelative:weather api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\turne\\repos\\Weather API\\Weather API\\Program.cs",
+              "RelativeDocumentMoniker": "Weather API\\Program.cs",
+              "ToolTip": "C:\\Users\\turne\\repos\\Weather API\\Weather API\\Program.cs",
+              "RelativeToolTip": "Weather API\\Program.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAQwB0AAACCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T01:53:51.782Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
