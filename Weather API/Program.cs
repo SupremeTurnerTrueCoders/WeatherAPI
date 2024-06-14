@@ -1,4 +1,5 @@
-﻿using System.Runtime.InteropServices.JavaScript;
+﻿using Newtonsoft.Json.Linq;
+using System.Runtime.InteropServices.JavaScript;
 
 public class Program
 {
@@ -9,25 +10,20 @@ public class Program
         var key = "9cd2281dfb31c4f6fbf98af017c6b933";
         var city = "Birmingham";
 
-        var weatherURL = $"api.openweathermap.org/data/3.0/onecall?lat=30.489772&lon=-99.771335&units=imperial";
-        var response = client.GetStringAsync(weatherURL).Result;
+       
+        
 
-        Console.WriteLine(response);
-
-        JSObject formattedResponse = JSObject.Parse(response);
-        var temp = formattedResponse["List"][0]["main"]["temp"];
-        Console.WriteLine(temp);
-
-        while (true) ;
+        while (true) 
         {
             Console.WriteLine();
             Console.WriteLine("Please enter the city name:");
-            var city_namw = Console.ReadLine();
+            var city_name = Console.ReadLine();
             Console.WriteLine();
-            var weatherURL = $"api.openweathermap.org/data/3.0/onecall?lat=30.489772&lon=-99.771335&units=imperial";
+            var weatherURL = $"http://api.openweathermap.org/data/2.5/weather?q={city}&units=imperial&appid={key}";
             var response = client.GetStringAsync(weatherURL).Result;
-            JSObject formattedResponse = JSObject.Parse(response).GetValue("main").ToString();
-            Console.WriteLine($"The current Temperature is {JObject.Parse(formattedResponse).GetValue("temp")} degrees Fahrenheit");
+            JObject formattedResponse = (JObject)JObject.Parse(response).GetValue("main");
+            var temperature = formattedResponse.Value<double>("temp");
+            Console.WriteLine($"The current Temperature is {temperature} degrees Fahrenheit");
             AddSpaces(2);
             Console.WriteLine("Would you like to exit");
             var userInput = Console.ReadLine();
